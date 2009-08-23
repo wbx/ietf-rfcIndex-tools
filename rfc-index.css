@@ -1,0 +1,38 @@
+div.ci { /* cituation */
+}
+div.nava { /* not available cituation */
+	color: #cccccc;
+}
+span.no1 { /* rfc number */
+}
+span.no2 { /* rfc number in cituation */
+}
+span.ttl { /* title */
+	color: #990033;
+	font: bold;
+}
+span.st { /* status */
+	color: #6666cc;
+}
+span.obb { /* obsoleted by */
+	color: #cc0000;
+}
+span.upb { /* updated by */
+	color: #cc0000;
+}
+span.ob { /* obsoletes */
+	color: #cc9900;
+}
+span.up { /* updates */
+	color: #cc9900;
+}
+span.als { /* also */
+}
+span.fmt { /* format */
+	color: #cccccc;
+}
+span.nol { /* not online */
+}
+span.date {
+	color: #009900;
+}

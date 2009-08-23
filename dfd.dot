@@ -1,0 +1,46 @@
+/* vim:set ts=8 sw=4 sts=4 ai nu et: */
+digraph dfd {
+    "./rfc-index.css" [ shape = box ];
+    "Internet" [ shape = box ];
+    "get_text.pl" [ shape = box, style="rounded", URL="../get_text.pl" ];
+    "html2zip.bash" [ shape = box, style="rounded", URL="../html2zip.bash" ];
+    "output/rfc-index.css" [ shape = box, URL="../output/rfc-index.css" ];
+    "output/rfc-index.html" [ shape = box, URL="../output/rfc-index.html" ];
+    "output/rfc-index.html.tmp" [ shape = box ];
+    "output/rfc-index.txt" [ shape = box, URL="../output/rfc-index.txt" ];
+    "output/rfc-index.zip" [ shape = box, URL="../output/rfc-index.zip" ];
+    "output/rfc-index/rfc-index.css" [ shape = box ];
+    "output/rfc-index/rfc-index.html" [ shape = box ];
+    "text2html.pl" [ shape = box, style="rounded", URL="../text2html.pl" ];
+    "url" [ shape = box ];
+    "./dfd.dot" [ shape = box, URL="../dfd.dot" ];
+    "output/dfd.png" [ shape = box, URL="../output/dfd.png" ];
+    "output/dfd-map.html" [ shape = box ];
+    "output/dfd.html" [ shape = box, URL="../output/dfd.html" ];
+    "graphviz" [ shape = box, style="rounded" ];
+    "map2html.pl" [ shape = box, style="rounded", URL="../map2html.pl" ];
+
+    "./dfd.dot" -> "graphviz";
+    "graphviz" -> "output/dfd.png";
+    "graphviz" -> "output/dfd-map.html";
+    "output/dfd-map.html" -> "map2html.pl";
+    "map2html.pl" -> "output/dfd.html";
+
+    "./rfc-index.css" -> "html2zip.bash";
+    "./rfc-index.css" -> "text2html.pl";
+    "Internet" -> "get_text.pl";
+    "get_text.pl" -> "output/rfc-index.txt";
+    "html2zip.bash" -> "output/rfc-index.zip";
+    "html2zip.bash" -> "output/rfc-index/rfc-index.css";
+    "html2zip.bash" -> "output/rfc-index/rfc-index.html";
+    "output/rfc-index.html" -> "html2zip.bash";
+    "output/rfc-index.html.tmp" -> "text2html.pl";
+    "output/rfc-index.txt" -> "text2html.pl";
+    "output/rfc-index/rfc-index.css" -> "html2zip.bash";
+    "output/rfc-index/rfc-index.html" -> "html2zip.bash";
+    "text2html.pl" -> "output/rfc-index.css";
+    "text2html.pl" -> "output/rfc-index.html";
+    "text2html.pl" -> "output/rfc-index.html.tmp";
+    "url" -> "get_text.pl";
+    "url" -> "text2html.pl";
+}
